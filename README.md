@@ -1,77 +1,239 @@
-# 🚀 Palo Alto Networks Log Retention Dashboard
+# 🔒 Palo Alto Networks — Career Progression & Retention Analysis
 
-## 📌 Project Overview
+A comprehensive **Data Science & HR Analytics** project analyzing employee career progression patterns, promotion gaps, and attrition risks to optimize retention strategies.
 
-The **Palo Alto Networks Log Retention Dashboard** is an interactive data analytics application built using **Streamlit**. It simulates and visualizes log retention behavior inspired by real-world firewall systems.
-
-In enterprise security systems, log retention depends on **storage capacity and logging rate**. When storage reaches its limit, older logs are automatically deleted. This project helps users understand:
-
-* 📊 How log storage is utilized
-* ⏳ How long logs are retained
-* 📉 How traffic impacts retention duration
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com/)
 
 ---
 
-## 🎯 Key Features
+## 📊 Project Overview
 
-✨ Interactive dashboard using Streamlit
-📈 Visual representation of log retention trends
-📊 KPI metrics:
+This project identifies **high-risk employees** and **retention opportunities** using machine learning clustering and risk scoring models. It provides actionable insights through an interactive Streamlit dashboard for HR teams and management.
 
-* Storage Usage
-* Retention Duration (Days)
-* Traffic Volume
+### 🎯 Key Objectives
+- Analyze career progression patterns across the organization
+- Identify promotion gap risks and stagnation signals
+- Build ML models to cluster employees by career trajectory
+- Create risk scores to prioritize retention interventions
+- Deliver insights via interactive dashboard
 
-🔍 Advanced filtering:
+---
 
-* Date range selection
-* Log type filtering
+## ✨ Features
 
-📉 Dynamic charts and graphs
-🧑‍💻 Clean and user-friendly UI
+### 🗺️ **Career Path Clustering**
+- K-Means clustering to identify 4-5 distinct career trajectories
+- PCA visualization of employee career paths
+- Hierarchical clustering for validation
+- Cluster labeling: Fast-Track Performers, Promotion-Stalled, etc.
+
+### 📈 **Promotion Gap Analysis**
+- Custom risk scoring (0-100 scale)
+- Feature engineering: Promotion Gap Ratio, Role Stagnation Index
+- Department and role-level promotion gap insights
+
+### 🎯 **Retention Opportunity Detection**
+- Identifies at-risk but still-engaged employees
+- Suggests targeted interventions (training, promotion review, role rotation)
+- Calculates retention opportunity index
+
+### 👔 **Managerial Insights**
+- Manager stability impact analysis
+- Team stagnation signals
+- Actionable recommendations for leadership
 
 ---
 
 ## 🛠️ Tech Stack
 
-* 🐍 Python
-* ⚡ Streamlit
-* 📊 Pandas
-* 📉 Matplotlib / Plotly
-* 🔢 NumPy
+| Category | Technologies |
+|----------|-------------|
+| **Language** | Python 3.11+ |
+| **Data Analysis** | Pandas, NumPy |
+| **Machine Learning** | Scikit-learn (K-Means, PCA, Hierarchical Clustering) |
+| **Visualization** | Matplotlib, Seaborn, Plotly |
+| **Dashboard** | Streamlit |
+| **Development** | Jupyter Notebook, VS Code |
 
 ---
 
-## ⚙️ How It Works
+## 📁 Project Structure
 
-This dashboard is based on a simple but powerful concept:
-
-> 📌 **Log Retention = Storage Capacity ÷ Log Generation Rate**
-
-* When log generation increases → retention decreases
-* When storage fills up → oldest logs are automatically deleted
-* Systems like enterprise firewalls follow this rolling log retention mechanism
-
-This project simulates that behavior and visualizes the impact using real-time filters and KPIs.
-
----
-
-## 🎮 Usage Guide
-
-Once the app is running:
-
-1. 📅 Select a **date range** to filter logs
-2. 🔍 Choose **log type** for specific analysis
-3. 📊 View **KPIs** to understand system performance
-4. 📈 Analyze charts to identify:
-
-   * Retention trends
-   * Storage consumption
-   * Traffic impact
+```
+palo-alto-networks-retention/
+│
+├── app/
+│   └── streamlit_app.py          # Interactive dashboard
+│
+├── data/
+│   ├── Palo_Alto_Networks.csv    # Original dataset
+│   ├── hr_data_processed.csv     # After feature engineering
+│   ├── hr_data_clustered.csv     # After clustering
+│   └── hr_data_final.csv         # Final dataset with risk scores
+│
+├── notebooks/
+│   ├── eda_analysis.py           # Exploratory Data Analysis
+│   ├── clustering.py             # K-Means clustering
+│   └── risk_scoring.py           # Risk score calculation
+│
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project documentation
+```
 
 ---
 
-## 📸 Screenshots
+## 🚀 Installation & Setup
+
+### Prerequisites
+- Python 3.11 or higher
+- pip package manager
+
+### Step 1: Clone Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/palo-alto-networks-retention.git
+cd palo-alto-networks-retention
+```
+
+### Step 2: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 3: Run Analysis Scripts
+```bash
+cd notebooks
+python eda_analysis.py      # Step 1: EDA + Feature Engineering
+python clustering.py         # Step 2: ML Clustering
+python risk_scoring.py       # Step 3: Risk Scoring
+```
+
+### Step 4: Launch Dashboard
+```bash
+cd ../app
+streamlit run streamlit_app.py
+```
+
+Dashboard will open at: `http://localhost:8501`
+
+---
+
+## 📊 Key Findings
+
+### Employee Risk Distribution
+- **🔴 High Risk:** 287 employees (19.5%)
+- **🟠 Medium Risk:** 674 employees (45.9%)
+- **🟢 Low Risk:** 509 employees (34.6%)
+
+### Career Clusters Identified
+1. **🚀 Fast-Track Performers** (15.3%) — High growth rate, higher attrition risk (32.9%)
+2. **🟠 Promotion-Stalled** (84.7%) — Moderate stagnation, moderate attrition (13.1%)
+
+### Actionable Insights
+- **678 employees** need career intervention
+- **88 employees** require immediate training programs
+- **75 employees** affected by manager instability
+
+### Top Recommended Actions
+| Action | Employees Affected |
+|--------|-------------------|
+| Role Rotation | 826 (56.2%) |
+| Engagement Check-in | 569 (38.7%) |
+| Promotion Review | 373 (25.4%) |
+
+---
+
+## 📸 Dashboard Preview
+
+### Career Path Clustering
+Interactive PCA visualization showing distinct employee career trajectories with cluster-based color coding.
+
+### Promotion Gap Monitor
+Department-wise promotion gap analysis with boxplots and histograms identifying stagnation hotspots.
+
+### Retention Opportunity Panel
+Risk score distributions and targeted intervention recommendations for at-risk employees.
+
+### Managerial Insights
+Manager stability vs risk correlation analysis for team-level decision making.
+
+---
+
+## 🧪 Methodology
+
+### 1. Feature Engineering
+Created 5 custom features:
+- **Promotion Gap Ratio** = Years Since Last Promotion / Years at Company
+- **Role Stagnation Index** = Years in Current Role / Years at Company
+- **Training Intensity Score** = Training Times / Years at Company
+- **Manager Stability Indicator** = Years with Current Manager / Years at Company
+- **Career Growth Rate** = Job Level / Total Working Years
+
+### 2. Machine Learning
+- **K-Means Clustering** with Elbow Method and Silhouette Score optimization
+- **Hierarchical Clustering** for validation (~overlap validation)
+- **PCA** for 2D visualization
+
+### 3. Risk Scoring
+Multi-factor risk score (0-100):
+- Promotion Gap Ratio (30 points)
+- Role Stagnation Index (25 points)
+- Years Since Last Promotion (20 points)
+- Career Growth Rate (15 points)
+- Training Frequency (10 points)
+
+---
+
+## 📈 Future Enhancements
+
+- [ ] Add predictive attrition model (Random Forest/XGBoost)
+- [ ] Integrate real-time data pipeline
+- [ ] Add sentiment analysis from employee feedback
+- [ ] Build manager-specific dashboards
+- [ ] Deploy automated email alerts for high-risk cases
+
+---
+
+## 👨‍💻 Author
+
+**Your Name**
+- LinkedIn: [your-linkedin-url]
+- GitHub: [@your-username]
+- Email: your.email@example.com
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Dataset:** IBM HR Analytics Employee Attrition Dataset
+- **Project Guidance:** Unified Mentor
+- **Inspiration:** Real-world HR analytics challenges in tech companies
+
+---
+
+## 📞 Contact
+
+For questions, suggestions, or collaboration opportunities:
+- Open an [Issue](https://github.com/YOUR_USERNAME/palo-alto-networks-retention/issues)
+- Connect on [LinkedIn](your-linkedin-url)
+
+---
+
+<div align="center">
+  
+**⭐ Star this repo if you found it helpful!**
+
+Made with ❤️ for HR Analytics & Data Science
+
+</div>
 
 <img width="1910" height="966" alt="Screenshot 2026-05-04 181938" src="https://github.com/user-attachments/assets/d688bbec-9a0e-424a-ac1f-2a1f819a7dd0" />
 
@@ -80,57 +242,3 @@ Once the app is running:
 <img width="1910" height="966" alt="Screenshot 2026-05-04 181938" src="https://github.com/user-attachments/assets/7416e473-7a75-4d9c-a7a1-c62372982608" />
 
 
-* 📊 Dashboard Overview
-* 📈 Retention Trends Graph
-* 📉 KPI Metrics Panel
-
----
-
-## 🌐 Live Demo
-
-https://palo-alto-networks-retention-hjuunavjffc7q4dsnppjyz.streamlit.app/
-
----
-
-## 🔮 Future Improvements
-
-* 🔗 Real-time data integration
-* 🤖 Machine Learning-based retention prediction
-* 🎨 Enhanced UI/UX design
-* ☁️ Cloud deployment (AWS / Azure / Streamlit Cloud)
-
----
-
-## 🤝 Contribution
-
-Contributions are welcome! 🎉
-
-If you'd like to improve this project:
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## 👨‍💻 Author
-
-**Ashish Kushwah**
-💡 Domain: Data Analytics
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-⭐ Star the repo
-🔁 Share with others
-💬 Give feedback
