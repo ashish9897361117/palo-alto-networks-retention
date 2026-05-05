@@ -116,7 +116,7 @@ cd ../app
 streamlit run streamlit_app.py
 ```
 
-Dashboard will open at: `http://localhost:8501`
+Dashboard will open at: `https://palo-alto-networks-retention-hjuunavjffc7q4dsnppjyz.streamlit.app/`
 
 ---
 
@@ -199,9 +199,9 @@ Multi-factor risk score (0-100):
 ## 👨‍💻 Author
 
 **Your Name**
-- LinkedIn: [your-linkedin-url]
-- GitHub: [@your-username]
-- Email: your.email@example.com
+- LinkedIn: https://www.linkedin.com/in/ashish-kushwah-382a722b1/
+- GitHub: [@ashish9897361117]
+- Email: ashishkush9758581707@gmail.com
 
 ---
 
@@ -222,8 +222,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For questions, suggestions, or collaboration opportunities:
-- Open an [Issue](https://github.com/YOUR_USERNAME/palo-alto-networks-retention/issues)
-- Connect on [LinkedIn](your-linkedin-url)
+- Open an [Issue](https://github.com/ashish9897361117/palo-alto-networks-retention/issues)
+- Connect on [LinkedIn](https://www.linkedin.com/in/ashish-kushwah-382a722b1/)
 
 ---
 
@@ -234,11 +234,4 @@ For questions, suggestions, or collaboration opportunities:
 Made with ❤️ for HR Analytics & Data Science
 
 </div>
-
-<img width="1910" height="966" alt="Screenshot 2026-05-04 181938" src="https://github.com/user-attachments/assets/d688bbec-9a0e-424a-ac1f-2a1f819a7dd0" />
-
-<img width="1907" height="948" alt="Screenshot 2026-05-04 181950" src="https://github.com/user-attachments/assets/a7d26bd3-8863-4041-9a36-239dc71edc31" />
-
-<img width="1910" height="966" alt="Screenshot 2026-05-04 181938" src="https://github.com/user-attachments/assets/7416e473-7a75-4d9c-a7a1-c62372982608" />
-
 
