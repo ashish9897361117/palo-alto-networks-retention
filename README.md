@@ -116,7 +116,7 @@ cd ../app
 streamlit run streamlit_app.py
 ```
 
-Dashboard will open at: `https://palo-alto-networks-retention-hjuunavjffc7q4dsnppjyz.streamlit.app/`
+Dashboard will open at: https://palo-alto-networks-retention-hjuunavjffc7q4dsnppjyz.streamlit.app/
 
 ---
 
